@@ -1,4 +1,8 @@
 class Scores():
+    """
+    An abstract class that holds the scores
+    of different characters in scrabble
+    """
     def __init__(self):
         pass
     def scoreLetter(self,c):
