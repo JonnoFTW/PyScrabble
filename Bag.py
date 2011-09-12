@@ -1,7 +1,7 @@
 import random
 import Scores
 class Bag:
-    ## A big ol' bag of tiles
+    """ A big ol' bag of tiles """
     def __init__(self):
         self.tiles = []
         tileCount = {
@@ -33,12 +33,17 @@ class Bag:
     
     def putBack(self,tile):
         self.tiles.append(tile)
-        shuffle()
+        self.shuffle()
     
     def getTile(self,n=1):
+        if n ==1:
+            return self.tiles.pop()
         out = []
-        for i in xrange(1,n+1):
-            out.append(self.tiles.pop())
+        try:
+            for i in xrange(1,n+1):
+                out.append(self.tiles.pop())
+        except:
+            pass
         return out
     
 class Tile(Scores.Scores):
@@ -47,4 +52,6 @@ class Tile(Scores.Scores):
         self.score = self.scoreLetter(label)
     def __str__(self):
         return str((self.label,self.score))
+    def __repr__(self):
+        return str(self.label) 
 t = Bag()

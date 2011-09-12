@@ -3,13 +3,13 @@ from Bag import Bag
 from Player import Player
 from Board import  Board
 
-import pygtk
-pygtk.require('2.0')
-import gtk
+##import pygtk
+##pygtk.require('2.0')
+##import gtk
 
 class Game:
-    def main(self):
-        gtk.main()
+##    def main(self):
+##        gtk.main()
     def delete_event(self, widget,event, data=None):
         return False
             
@@ -18,15 +18,15 @@ class Game:
         return False
     
     def __init__(self,d):
-        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-        self.window.set_size_request(600,650)
-        self.window.set_title("Scrabble")
-        self.statusbar = gtk.Statusbar()
-        self.window.connect("delete_event",self.delete_event)
-        self.window.connect("destroy",self.destroy)
-        
-        self.window.show()
-        self.refresh()
+##        self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+##        self.window.set_size_request(600,650)
+##        self.window.set_title("Scrabble")
+##        self.statusbar = gtk.Statusbar()
+##        self.window.connect("delete_event",self.delete_event)
+##        self.window.connect("destroy",self.destroy)
+##        
+##        self.window.show()
+##        self.refresh()
         self.d = d
         self.bag = Bag()
         self.board = Board()
